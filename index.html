@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS  if error remove 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script-->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    .login-input {
+        width: 200px;
+        max-width: 300px;
+    }
+
+    body {
+        position: relative;
+        background: linear-gradient(180deg, blue, darkblue);
+    }
+
+    #loginD {
+        padding: 50px;
+
+        border-radius: 40px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(15, 178, 228, 0.9);
+
+        text-align: center;
+    }
+
+    h2 {
+        display: inline-block;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .login-input {
+            width: 200px;
+            max-width: 300px;
+        }
+
+        h2 {
+            font-size: 30px;
+            display: block;
+        }
+
+        #log {
+            text-align: center !important;
+        }
+
+        #d {
+            font-size: 25px !important;
+            display: inline-block;
+            margin-left: 10px !important;
+        }
+
+        #img {
+            height: 30px!important;
+            border-radius: 50%;
+        }
+    }
+
+    #img {
+        height: 50px;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div id="header" class="text-center text-white pt-4">
+        <img id="img" src="./assets/15.09.2021_12.45.18_REC.png" alt="">
+        <h2 class="ml-5" id="d">BT chat site</h2>
+    </div>
+    <div id="loginD" class="col-lg-6 col-md-8 col-sm-12">
+        <center>
+            <div id="log" style="text-align: right; width:max-content;">
+                <h2 class="text-white">User Name:</h2>
+                <input type="text" id="nameI" class="form-control d-inline login-input ml-1" required>
+
+                <br>
+                <br>
+                <h2 class="text-white">Room Name:</h2>
+                <input type="text" id="roomI" class="form-control d-inline login-input ml-1" required>
+
+                <br>
+                <br>
+                <h2 class="text-white">Room Password:</h2>
+                <input type="text" id="roomPassI" class="form-control d-inline login-input ml-1" required>
+                <br><br>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success" id="login">Enter Room</button>
+            </div>
+        </center>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
