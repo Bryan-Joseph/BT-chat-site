@@ -51,7 +51,7 @@ onload = function () {
         var deleteButton = "<button data-delete='" + snapK + "' data-deletename='" + name + "' class='trash'><i class='fa fa-trash' aria-hidden='true'></i></button>";
 
 
-        var result = "<div class='prop'><h3 class='d-inline-block'>" + name + "  <img src='./assets/tick.png' class='tick'></h3>" + speakButton + deleteButton + "<p>" + message + "</p></div><br><br>";
+        var result = "<div class='prop'><h3 class='d-inline-block h3Class'>" + name + "  <img src='./assets/tick.png' class='tick'></h3>" + speakButton + deleteButton + "<p>" + message + "</p></div><br><br>";
         document.getElementById("chatMessageDiv").innerHTML += result;
 
       }
@@ -97,7 +97,7 @@ document.addEventListener("click", e => {
 var SRecog = window.webkitSpeechRecognition;
 var recog = new SRecog();
 
-document.getElementById("micButton").onclick = function () {
+document.getElementById("micButton").onclick =() => {
   recog.start();
 }
 
@@ -110,7 +110,7 @@ recog.onresult = function (e) {
 }
 
 
-document.getElementById("sendButton").onclick = function () {
+document.getElementById("sendButton").onclick = () => {
   var input = document.getElementById("input").value;
   if (input != '') {
     push(ref(database, "/" + roomName + " " + roomPass), {
